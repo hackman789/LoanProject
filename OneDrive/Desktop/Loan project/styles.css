@@ -1,0 +1,108 @@
+:root {
+    --primary-color: #d4af37; /* Gold */
+    --hover-color: #b89f2e; /* Darker Gold */
+    --background-color: #000000; /* Black */
+    --container-bg: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    --text-color: #ffffff; /* White */
+    --border-color: #d4af37; /* Gold for borders */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: var(--container-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(255, 215, 0, 0.5);
+    transition: transform 0.2s;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+}
+
+.login-form input {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: var(--text-color);
+}
+
+.button {
+    padding: 12px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    margin: 10px 0;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.button:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #333333;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+ul li:hover {
+    background: #444444;
+}
+
+/* Spinner for loading */
+.spinner {
+    display: none;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.button.back-button {
+    background-color: #444444;
+    color: var(--text-color);
+    margin-top: 20px;
+}
+
+.button.back-button:hover {
+    background-color: var(--hover-color);
+}
